@@ -3,7 +3,7 @@
 
 variable "project_id" {
   description = "The project ID to host the cluster in"
-  default     = "easy-llmops"
+  default     = "mlops-460502"
 }
 
 variable "region" {
