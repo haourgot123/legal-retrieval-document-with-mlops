@@ -1,9 +1,7 @@
 loguru==0.7.3
 pyvi==0.1.1
 attr==0.3.2
-ansible==8.3.0
 requests==2.31.0
-google-auth==2.28.1
 qdrant-client==1.15.0
 fastembed==0.7.1
 tqdm==4.67.1

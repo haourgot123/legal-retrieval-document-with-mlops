@@ -1,0 +1,4 @@
+image:
+  repository: haourgot123/legal_chatbot_retrieval
+  tag: "v4"
+  pullPolicy: Always
