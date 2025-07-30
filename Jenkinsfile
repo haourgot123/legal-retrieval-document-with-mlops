@@ -53,7 +53,7 @@ pipeline {
             steps {
                 script {
                     container('helm') {
-                        sh("helm upgrade --install legal-chatbot ./helm-charts/legal_chatbot --namespace model-serving")
+                        sh("helm upgrade --install legal-chatbot ./helm_charts/legal_chatbot --namespace model-serving")
                     }
                 }
             }
