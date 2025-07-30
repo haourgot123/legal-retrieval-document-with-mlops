@@ -32,9 +32,9 @@ pipeline {
             steps {
                 script {
                     echo 'Pushing Docker image...'
-                    docker.withRegistry("https://${registry}", registryCredential) {
-                        docker.image("${registry}").push()
-                        docker.image("${registry}").push('v4')
+                    docker.withRegistry("", registryCredential) {
+                        docker.image("${registry}:v4").push()
+                        docker.image("${registry}:v4").push('latest')
                     }
                 }
             }
