@@ -18,7 +18,7 @@ chat_service = ChatService(
     sparse_model="Qdrant/bm25",
     late_interaction_model="colbert-ir/colbertv2.0",
     collection_name="legal_documents",
-    qdrant_url="http://qdrant.database.svc.cluster.local:6333"
+    qdrant_url="http://qdrant.vectordb.svc.cluster.local:6333"
 )
 
 @app.get("/health")

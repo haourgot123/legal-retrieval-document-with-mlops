@@ -27,7 +27,7 @@ resource "google_container_cluster" "primary" {
   enable_autopilot = false
 
   // Specify the initial number of nodes
-  initial_node_count = 2
+  initial_node_count = 3
 
   // Node configuration
   node_config {

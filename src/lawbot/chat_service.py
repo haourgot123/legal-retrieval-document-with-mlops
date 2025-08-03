@@ -21,7 +21,7 @@ class ChatService:
         sparse_model: str = "Qdrant/bm25",
         late_interaction_model: str = "colbert-ir/colbertv2.0",
         collection_name: str = "legal_documents",
-        qdrant_url: str = "http://qdrant.database.svc.cluster.local:6333"
+        qdrant_url: str = "http://qdrant.vectordb.svc.cluster.local:6333"
     ) -> None:
         """
         Initialize the ChatService with OpenAI API key and model.
