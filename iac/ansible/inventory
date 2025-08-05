@@ -1,0 +1,2 @@
+[servers]
+34.126.159.189 ansible_ssh_private_key_file=/Users/haonguyen/.ssh/id_ed25519
