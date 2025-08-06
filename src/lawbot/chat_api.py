@@ -23,7 +23,7 @@ set_tracer_provider(
 tracer = get_tracer_provider().get_tracer("legal-chatbot", "0.1.2")
 
 jaeger_exporter = JaegerExporter(
-    agent_host_name="localhost",
+    agent_host_name="jaeger-agent.tracer.",
     agent_port=6831,
 )
 span_processor = BatchSpanProcessor(jaeger_exporter)
