@@ -22,6 +22,15 @@ logstashPipeline:
         password => '${ELASTICSEARCH_PASSWORD}'
       }
     }
+
+
+service:
+  ports:
+    - name: beats
+      port: 5044
+      protocol: TCP
+      targetPort: 5044
+
 extraEnvs:
   - name: ELASTICSEARCH_USERNAME
     valueFrom:
