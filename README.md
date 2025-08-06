@@ -95,7 +95,26 @@ cat /var/jenkins_home/secrets/initialAdminPassword
    - Kubernetes
    - Google Kubernetes Engine
 
-6. Configure credentials:
+6. Install k8s plugin on Jenkins
+
+Please install the `Kubernetes` plugin and set up a connection to GKE as guidance on the lesson.
+
+Don't forget to grant permissions to the service account which is trying to connect to our cluster by the following command:
+
+```shell
+kubectl create ns model-serving
+kubectl create clusterrolebinding model-serving-admin-binding \
+  --clusterrole=admin \
+  --serviceaccount=model-serving:default \
+  --namespace=model-serving
+
+kubectl create clusterrolebinding anonymous-admin-binding \
+  --clusterrole=admin \
+  --user=system:anonymous \
+  --namespace=model-serving
+```
+
+7. Configure credentials:
    - Set up Docker Hub credentials (ID: dockerhub)
    - Configure GKE service account credentials
 
