@@ -13,7 +13,7 @@ daemonset:
                 logs_path: "/var/log/containers/"
 
       output.logstash:
-        hosts: ["elk-logstash-logstash-headless.elk.svc.cluster.local:5044"]
+        hosts: ["elk-logstash-logstash.elk.svc.cluster.local:5044"]
         timeout: 15
 
       logging.level: info

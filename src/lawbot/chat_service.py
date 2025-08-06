@@ -3,13 +3,12 @@ import time
 from openai import OpenAI
 from typing import List, Dict, Any, Generator
 from loguru import logger
-from dotenv import load_dotenv
 
 from hybrid_search import HybridSearch
 from prompt import system_prompt
 
-load_dotenv()
 
+os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
 class ChatService:
 
