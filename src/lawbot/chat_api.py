@@ -3,7 +3,6 @@ from fastapi import FastAPI
 from fastapi.responses import StreamingResponse
 from typing import Generator, List, Dict, Any
 from loguru import logger
-from dotenv import load_dotenv
 
 from opentelemetry.exporter.jaeger.thrift import JaegerExporter
 from opentelemetry.instrumentation.fastapi import FastAPIInstrumentor
@@ -15,7 +14,8 @@ from opentelemetry.trace import get_tracer_provider, set_tracer_provider
 from chat_service import ChatService
 
 
-load_dotenv()
+
+os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
 set_tracer_provider(
     TracerProvider(resource=Resource.create({SERVICE_NAME: "chat-service"}))

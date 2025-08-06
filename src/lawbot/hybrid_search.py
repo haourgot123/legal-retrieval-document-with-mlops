@@ -5,11 +5,9 @@ import openai
 from qdrant_client import QdrantClient, models
 from fastembed.sparse.bm25 import Bm25
 from fastembed.late_interaction import LateInteractionTextEmbedding
-from dotenv import load_dotenv
-
-load_dotenv()
 
 
+os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
 class HybridSearch:
 
